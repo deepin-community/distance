@@ -1,0 +1,5 @@
+The upstream version of this package provides fast C versions of the
+distance metrics.  Unfortunately, these are very old and no longer work
+with the current version of Python, so they have been disabled.
+
+ -- Julian Gilbey <jdg@debian.org>, Thu, 31 Dec 2020 06:37:46 +0000
