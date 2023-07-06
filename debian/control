@@ -1,15 +1,24 @@
-Source: template-repository
-Section: unknown
+Source: distance
+Section: python
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Julian Gilbey <jdg@debian.org>,
+           Drew Parsons <dparsons@debian.org>
+Build-Depends: debhelper-compat (= 13),
+               dh-python,
+               python3-all
+Standards-Version: 4.6.2
+Homepage: https://github.com/doukremt/distance
+Vcs-Git: https://salsa.debian.org/python-team/packages/distance.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/distance
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: python3-distance
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Description: Python library for comparing sequences
+ This package provides helpers for computing similarities between
+ arbitrary sequences. Included metrics are Levenshtein, Hamming,
+ Jaccard, and Sorensen distance, plus some bonuses. The distance
+ computations are implemented in pure Python.
